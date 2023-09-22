@@ -10,4 +10,4 @@
 
 ## npm run dev
 
-## npx json-server --port --port 5000 db.json
+## npx json-server --port 5000 db.json
