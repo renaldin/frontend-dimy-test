@@ -19,6 +19,10 @@ async function ProductList() {
     const products: Product[] = await getProducts()
     const countProduct = products.length > 1;
 
+    const grandTotal = products.reduce((total, product) => {
+        return total + product.price * product.qty;
+    }, 0);
+
     return (
         <div className="py-10 px-10">
             <div className="py-2">
@@ -52,6 +56,13 @@ async function ProductList() {
                         </tr>
                     ))}
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colSpan={4}></td>
+                        <td>Grand Total:</td>
+                        <td>{grandTotal}</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     )

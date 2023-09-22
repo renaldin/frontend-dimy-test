@@ -2,9 +2,15 @@
   "products": [
     {
       "productName": "Product 2",
-      "qty": 1,
+      "qty": 2,
       "price": "1000",
       "id": 2
+    },
+    {
+      "productName": "Product 4",
+      "qty": "2",
+      "price": "1000",
+      "id": 3
     }
   ]
 }
